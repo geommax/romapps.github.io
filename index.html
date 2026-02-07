@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RomDynamics — Internal App Hub</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ─── Auth Gate ─── -->
+  <div id="auth-gate" class="auth-gate">
+    <div class="auth-card">
+      <div class="auth-logo">⚙️</div>
+      <h1>RomDynamics</h1>
+      <p class="auth-subtitle">Internal Application Hub</p>
+      <p class="auth-info">Sign in with your team credentials to continue.</p>
+      <form id="auth-form" autocomplete="off">
+        <div class="input-group">
+          <label for="auth-token">Access Token</label>
+          <input
+            id="auth-token"
+            type="password"
+            placeholder="Enter your access token"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Sign In
+        </button>
+        <p id="auth-error" class="auth-error" hidden>Invalid token. Please try again.</p>
+      </form>
+      <p class="auth-hint">Contact your team lead if you don't have a token.</p>
+    </div>
+  </div>
+
+  <!-- ─── Main App ─── -->
+  <div id="app" class="app" hidden>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="brand">
+          <span class="brand-icon">⚙️</span>
+          <div>
+            <h1 class="brand-name">RomDynamics</h1>
+            <span class="brand-tag">Internal App Hub</span>
+          </div>
+        </div>
+        <div class="header-actions">
+          <span id="last-updated" class="last-updated"></span>
+          <button id="btn-logout" class="btn btn-ghost" title="Sign out">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            <span class="sr-only">Sign out</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Search & Filters -->
+    <section class="toolbar">
+      <div class="toolbar-inner">
+        <div class="search-box">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search apps, tags, descriptions…"
+            autocomplete="off"
+          />
+          <kbd class="search-kbd">/</kbd>
+        </div>
+        <div class="filter-bar" id="filter-bar">
+          <button class="filter-chip active" data-category="all">All</button>
+          <!-- chips rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Sections -->
+    <main class="main" id="main-content">
+      <!-- rendered by JS -->
+    </main>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="empty-state" hidden>
+      <div class="empty-icon">🔍</div>
+      <h2>No apps found</h2>
+      <p>Try adjusting your search or filters.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 RomDynamics — Internal use only. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

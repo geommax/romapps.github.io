@@ -1,0 +1,163 @@
+{
+  "lastUpdated": "2026-02-08",
+  "categories": [
+    {
+      "id": "mobile-robots",
+      "name": "Mobile Robots",
+      "icon": "🤖",
+      "description": "Applications for mobile robot platforms"
+    },
+    {
+      "id": "dog-robots",
+      "name": "Dog Robots",
+      "icon": "🐕",
+      "description": "Applications for quadruped robot platforms"
+    },
+    {
+      "id": "drones",
+      "name": "Drones",
+      "icon": "🚁",
+      "description": "Applications for aerial robot platforms"
+    },
+    {
+      "id": "books",
+      "name": "Books & Docs",
+      "icon": "📚",
+      "description": "Internal documentation, guides, and references"
+    }
+  ],
+  "apps": [
+    {
+      "id": "rom-nav-stack",
+      "name": "ROM Nav Stack",
+      "category": "mobile-robots",
+      "version": "2.4.1",
+      "description": "Autonomous navigation stack for mobile robot platforms with SLAM, path planning, and obstacle avoidance.",
+      "tags": ["navigation", "slam", "ros2", "lidar"],
+      "repo": "romdynamics/rom-nav-stack",
+      "status": "stable",
+      "updatedAt": "2026-01-20"
+    },
+    {
+      "id": "rom-fleet-manager",
+      "name": "ROM Fleet Manager",
+      "category": "mobile-robots",
+      "version": "1.8.0",
+      "description": "Multi-robot fleet management and task allocation system for warehouse and logistics environments.",
+      "tags": ["fleet", "multi-robot", "logistics", "dashboard"],
+      "repo": "romdynamics/rom-fleet-manager",
+      "status": "stable",
+      "updatedAt": "2026-02-01"
+    },
+    {
+      "id": "rom-mobile-teleop",
+      "name": "ROM Mobile Teleop",
+      "category": "mobile-robots",
+      "version": "1.2.0",
+      "description": "Web-based teleoperation interface for remote mobile robot control with live video streaming.",
+      "tags": ["teleop", "webrtc", "remote-control"],
+      "repo": "romdynamics/rom-mobile-teleop",
+      "status": "beta",
+      "updatedAt": "2025-12-15"
+    },
+    {
+      "id": "rom-quad-locomotion",
+      "name": "ROM Quad Locomotion",
+      "category": "dog-robots",
+      "version": "3.1.0",
+      "description": "Advanced locomotion controller for quadruped robots supporting multiple gaits and terrain adaptation.",
+      "tags": ["locomotion", "gait", "control", "ros2"],
+      "repo": "romdynamics/rom-quad-locomotion",
+      "status": "stable",
+      "updatedAt": "2026-01-28"
+    },
+    {
+      "id": "rom-quad-vision",
+      "name": "ROM Quad Vision",
+      "category": "dog-robots",
+      "version": "2.0.3",
+      "description": "Perception pipeline for quadruped robots including terrain classification and object detection.",
+      "tags": ["perception", "vision", "deep-learning", "camera"],
+      "repo": "romdynamics/rom-quad-vision",
+      "status": "stable",
+      "updatedAt": "2026-01-10"
+    },
+    {
+      "id": "rom-quad-sim",
+      "name": "ROM Quad Simulator",
+      "category": "dog-robots",
+      "version": "1.5.2",
+      "description": "Physics-based simulation environment for quadruped robot development and reinforcement learning.",
+      "tags": ["simulation", "gazebo", "rl", "training"],
+      "repo": "romdynamics/rom-quad-sim",
+      "status": "beta",
+      "updatedAt": "2025-11-30"
+    },
+    {
+      "id": "rom-fly-autopilot",
+      "name": "ROM Fly Autopilot",
+      "category": "drones",
+      "version": "4.0.0",
+      "description": "Full autopilot stack for multirotor drones with mission planning and autonomous flight modes.",
+      "tags": ["autopilot", "flight-controller", "px4", "mission"],
+      "repo": "romdynamics/rom-fly-autopilot",
+      "status": "stable",
+      "updatedAt": "2026-02-05"
+    },
+    {
+      "id": "rom-fly-inspect",
+      "name": "ROM Fly Inspect",
+      "category": "drones",
+      "version": "1.3.0",
+      "description": "Automated infrastructure inspection toolkit using drone-mounted cameras and AI defect detection.",
+      "tags": ["inspection", "ai", "computer-vision", "mapping"],
+      "repo": "romdynamics/rom-fly-inspect",
+      "status": "beta",
+      "updatedAt": "2025-12-20"
+    },
+    {
+      "id": "rom-fly-swarm",
+      "name": "ROM Fly Swarm",
+      "category": "drones",
+      "version": "0.9.1",
+      "description": "Swarm intelligence framework for coordinated multi-drone operations and formation flight.",
+      "tags": ["swarm", "multi-drone", "coordination", "formation"],
+      "repo": "romdynamics/rom-fly-swarm",
+      "status": "alpha",
+      "updatedAt": "2026-01-15"
+    },
+    {
+      "id": "rom-robotics-handbook",
+      "name": "ROM Robotics Handbook",
+      "category": "books",
+      "version": "5th Edition",
+      "description": "Comprehensive internal handbook covering RomDynamics engineering standards, best practices, and workflows.",
+      "tags": ["handbook", "standards", "onboarding", "guide"],
+      "repo": "romdynamics/rom-robotics-handbook",
+      "status": "stable",
+      "updatedAt": "2026-02-01"
+    },
+    {
+      "id": "rom-ros2-cookbook",
+      "name": "ROS2 Cookbook",
+      "category": "books",
+      "version": "3rd Edition",
+      "description": "Practical recipes and patterns for ROS2 development tailored to RomDynamics robot platforms.",
+      "tags": ["ros2", "cookbook", "tutorials", "recipes"],
+      "repo": "romdynamics/rom-ros2-cookbook",
+      "status": "stable",
+      "updatedAt": "2025-12-28"
+    },
+    {
+      "id": "rom-ml-field-guide",
+      "name": "ML Field Guide",
+      "category": "books",
+      "version": "2nd Edition",
+      "description": "Machine learning deployment guide for robotics applications with model training and edge inference.",
+      "tags": ["machine-learning", "deployment", "edge", "inference"],
+      "repo": "romdynamics/rom-ml-field-guide",
+      "status": "stable",
+      "updatedAt": "2026-01-05"
+    }
+  ]
+}
