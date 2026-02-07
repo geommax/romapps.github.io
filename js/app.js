@@ -87,16 +87,37 @@
 
   function handleLogout() {
     destroySession();
-    $app.hidden = true;
-    $gate.hidden = false;
-    $authToken.value = '';
-    $authToken.focus();
+    $app.classList.remove('visible');
+
+    setTimeout(() => {
+      $app.hidden = true;
+      $gate.hidden = false;
+      window.scrollTo(0, 0);
+
+      requestAnimationFrame(() => {
+        $authToken.value = '';
+        $authToken.focus();
+      });
+    }, 300);
   }
 
   function showApp() {
-    $gate.hidden = true;
-    $app.hidden = false;
-    loadData();
+    // Animate auth gate out
+    $gate.classList.add('fade-out');
+
+    setTimeout(() => {
+      $gate.hidden = true;
+      $gate.classList.remove('fade-out');
+      $app.hidden = false;
+      window.scrollTo(0, 0);
+
+      // Trigger app fade-in on next frame
+      requestAnimationFrame(() => {
+        $app.classList.add('visible');
+      });
+
+      loadData();
+    }, 350);
   }
 
   // ── Data ──
@@ -260,6 +281,10 @@
 
   // ── Init ──
   if (isSessionValid()) {
-    showApp();
+    // Returning session — skip animation, show app instantly
+    $gate.hidden = true;
+    $app.hidden = false;
+    $app.classList.add('visible');
+    loadData();
   }
 })();

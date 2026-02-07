@@ -67,6 +67,34 @@ body {
   min-height: 100vh;
   padding: 2rem;
   background: var(--c-bg);
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.auth-gate.fade-out {
+  opacity: 0;
+  transform: scale(1.02);
+  pointer-events: none;
+}
+
+.auth-gate[hidden] {
+  display: none;
+}
+
+/* ── App wrapper ── */
+.app {
+  opacity: 0;
+  transition: opacity 0.4s ease 0.15s;
+}
+
+.app.visible {
+  opacity: 1;
+}
+
+.app[hidden] {
+  display: none;
 }
 
 .auth-card {
