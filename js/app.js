@@ -10,7 +10,7 @@
   //   echo -n "YOUR_TOKEN" | shasum -a 256
   // Default token: "romdynamics2026"
   const TOKEN_HASH =
-    '5e30fc4f0db7a5c85a704e1e0a5e94fee12f3a0b3c78d45e1d1e7c3bf8a8e4d2';
+    'e9b87461c60b5e3840a3276425de88049e87bb8be8befc4e75c8cd9f5254f836';
   const SESSION_KEY = 'rom_auth_session';
   const SESSION_TTL = 8 * 60 * 60 * 1000; // 8 hours
 
@@ -72,11 +72,7 @@
     if (!token) return;
 
     const hash = await sha256(token);
-    // Accept any non-empty token for ease of internal use,
-    // or validate against TOKEN_HASH for strict mode.
-    // For now we accept the token "romdynamics2026" or any token
-    // (toggle strict mode below).
-    const STRICT_MODE = false;
+    const STRICT_MODE = true;
 
     if (STRICT_MODE && hash !== TOKEN_HASH) {
       $authError.hidden = false;
